@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أباذر ماجد | مبرمج ومصمم وسائط متعددة</title>
+    <title>أباذر ماجد | مطور تطبيقات فلوتر ونظم برمجية ذكية</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="البورتفوليو الشخصي لأباذر ماجد - مبرمج Flutter ومصمم وسائط متعددة وخبير في الأنظمة الذكية والأتمتة.">
+    <meta name="description" content="البورتفوليو الشخصي للمطور أباذر ماجد - خبير تطوير تطبيقات Flutter، الأنظمة المؤتمتة، وأدوات المونتاج وتصميم الهويات البصرية بمظهر احترافي ومبتكر.">
+    <meta name="keywords" content="أباذر ماجد, مطور فلوتر, Flutter Developer Basra, مبرمج العراق, تصميم واجهات, أتمتة بايثون, Pine Script, مونتاج فيديو, تطبيقات APK">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -14,50 +16,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Elements -->
+    <!-- Background Space Elements -->
     <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
     <div class="bg-grid"></div>
 
+    <!-- Header Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">ABATHER<span>.</span></div>
             <ul class="nav-links">
-                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#hero" class="active">الرئيسية</a></li>
                 <li><a href="#about">عني</a></li>
                 <li><a href="#skills">المهارات</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="#contact">اتصل بي</a></li>
+                <li><a href="#apk-center">تطبيقاتي (APK)</a></li>
+                <li><a href="#projects">أبرز المشاريع</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
             </ul>
-            <div class="nav-toggle">
+            <div class="nav-toggle" id="hamburger-menu">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <div class="mobile-nav-close" id="drawer-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#skills">المهارات</a></li>
+            <li><a href="#apk-center">تطبيقاتي (APK)</a></li>
+            <li><a href="#projects">أبرز المشاريع</a></li>
+            <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
 
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="hero-content">
+                    <div class="hero-text reveal">
+                        <h2 class="badge"><i class="fas fa-bolt"></i> متاح للمشاريع والحلول الذكية الكبرى</h2>
+                        <h1>أنا أباذر ماجد</h1>
+                        <h3 class="glitch-text">مطور تطبيقات وحلول برمجية متكاملة</h3>
+                        <p>أقوم ببناء وتصميم النظم البرمجية المعقدة، متخصص في تطوير تطبيقات الموبايل الهجينة باستخدام Flutter، وأتمتة النظم الرقمية بلغة Python، وهندسة الأنظمة الإدارية الشاملة بأسلوب واجهات تفاعلي فائق الاحترافية والجمال.</p>
+                        <div class="hero-btns">
+                            <a href="#apk-center" class="btn primary"><i class="fas fa-download"></i> تحميل تطبيقاتي (APK)</a>
+                            <a href="https://wa.me/9647801943954" target="_blank" class="btn secondary"><i class="fab fa-whatsapp"></i> تواصل مباشر</a>
+                        </div>
+                    </div>
                     <div class="hero-image-wrapper reveal">
                         <img src="mang/3926734177934878693 (1).jpg" alt="أباذر ماجد" class="hero-image">
                         <div class="image-glow"></div>
-                    </div>
-                    <div class="hero-text reveal">
-                        <h2 class="badge">متاح للعمل الحر والمشاريع الكبيرة</h2>
-                        <h1>أنا أباذر ماجد</h1>
-                        <h3 class="glitch-text">مبرمج ومصمم وسائط متعددة</h3>
-                        <p>أجمع بين دقة الأكواد البرمجية واللمسة الإبداعية في التصميم المُرئي، مع تركيز خاص على أتمتة العمليات ودمج تقنيات الذكاء الاصطناعي.</p>
-                        <div class="hero-btns">
-                            <a href="#projects" class="btn primary">مشاهدة أعمالي</a>
-                            <a href="https://wa.me/9647801943954" target="_blank" class="btn secondary">تواصل معي</a>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="scroll-down">
                 <span class="mouse"></span>
-                <span class="text">اسحب للأسفل</span>
+                <span class="text">اسحب للتصفح</span>
             </div>
         </section>
 
@@ -70,31 +91,31 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-info reveal">
-                        <h3>من هو أباذر؟</h3>
-                        <p>مبرمج "عصامي" (Self-taught) أعتمد على الإنتاجية العالية خصوصاً في الصباح الباكر (بين 4 إلى 6 صباحاً). أمتلك شغفاً كبيراً بالعمل الحر والتطوير الذاتي، وأسعى لبناء مشاريع رقمية ناجحة تساهم في تحسين حياة الآخرين.</p>
+                        <h3>من هو أباذر ماجد؟</h3>
+                        <p>مطور برمجيات عصامي ذو شغف عارم بحل المشكلات وتسهيل حياة المستخدمين والشركات رقمياً. أعتمد على التفكير التحليلي والعمل الدؤوب في الفجر الصباحي لبناء برمجيات متينة ذات أداء سريع وخفيف، وكود نظيف قابل للتوسع المستقبلي مع تصميم واجهات مستخدم غاية في الحداثة والانسيابية.</p>
                         <div class="stats-row">
                             <div class="stat-card">
                                 <h4>+5</h4>
-                                <p>سنوات خبرة</p>
+                                <p>سنوات تطوير وشغف</p>
                             </div>
                             <div class="stat-card">
                                 <h4>+50</h4>
-                                <p>مشروع منجز</p>
+                                <p>مشروع برمجياً ورقمياً</p>
                             </div>
                             <div class="stat-card">
                                 <h4>100%</h4>
-                                <p>إتقان ذاتي</p>
+                                <p>التزام بالابتكار والتطوير</p>
                             </div>
                         </div>
                     </div>
                     <div class="about-ai reveal">
                         <div class="glass-card ai-insight">
-                            <h3><i class="fas fa-microchip"></i> العقل التحليلي والذكاء الاصطناعي</h3>
-                            <p>تتميز محادثات أباذر مع أنظمة الذكاء الاصطناعي بالدقة والفضول المعرفي. لا يكتفي بالإجابات السطحية بل يغوص في "لماذا وكيف".</p>
+                            <h3><i class="fas fa-microchip"></i> العقل التحليلي وهندسة الحلول</h3>
+                            <p>أؤمن بأن كتابة الكود ليست إلا الجزء الأخير من البرمجة؛ فالهندسة الحقيقية تبدأ بفهم المشكلة وتصميم الحلول المؤتمتة القابلة للتوسع بأفضل معايير الحماية والأداء الفائق.</p>
                             <ul>
-                                <li><i class="fas fa-check"></i> تفكير استراتيجي ونقدي</li>
-                                <li><i class="fas fa-check"></i> قدرة استثنائية على حل المشكلات</li>
-                                <li><i class="fas fa-check"></i> ربط الأحداث والبيانات المستقبلية</li>
+                                <li><i class="fas fa-cube"></i> تصميم قواعد بيانات سريعة وآمنة</li>
+                                <li><i class="fas fa-bolt"></i> أتمتة العمليات الرقمية وحل المشكلات البرمجية المعقدة</li>
+                                <li><i class="fas fa-chart-pie"></i> دمج تقنيات الذكاء الاصطناعي لتسريع وتبسيط المهام</li>
                             </ul>
                         </div>
                     </div>
@@ -106,7 +127,7 @@
         <section id="skills" class="skills-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>المهارات التقنية</h2>
+                    <h2>القدرات والمهارات التقنية</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="skills-grid">
@@ -118,10 +139,10 @@
                         </div>
                         <ul class="skill-list">
                             <li><span>Flutter (Android & iOS)</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></li>
-                            <li><span>Python (Bots & Auto)</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
-                            <li><span>C# & .NET</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></li>
-                            <li><span>Pine Script (Trading)</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
-                            <li><span>HTML / CSS / JS</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
+                            <li><span>Python (Bots & Automation)</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
+                            <li><span>C# & .NET Systems</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></li>
+                            <li><span>Pine Script (Trading Algorithms)</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
+                            <li><span>HTML / CSS / JS Vanilla</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
                         </ul>
                     </div>
                     <!-- Design Skills -->
@@ -135,180 +156,303 @@
                             <li><span>After Effects</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
                             <li><span>Photoshop / Illustrator</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
                             <li><span>DaVinci Resolve</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></li>
-                            <li><span>UI/UX Design</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
+                            <li><span>UI/UX Interface Design</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
                         </ul>
                     </div>
-                    <!-- Financial Skills -->
+                    <!-- Systems & Concepts -->
                     <div class="skill-category reveal">
                         <div class="category-header">
                             <i class="fas fa-chart-line"></i>
-                            <h3>التحليل والأنظمة</h3>
+                            <h3>الأنظمة والتحليل</h3>
                         </div>
                         <ul class="skill-list">
-                            <li><span>SMC & ICT Concepts</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
-                            <li><span>ERP & CRM Systems</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
-                            <li><span>Selenium Automation</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></li>
-                            <li><span>Hardware Management</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></li>
+                            <li><span>SMC & ICT Trading Concepts</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></li>
+                            <li><span>ERP & CRM Business Systems</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></li>
+                            <li><span>Selenium Web Automation</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></li>
+                            <li><span>Systems Administration & HW</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- ==========================================
+           UPDATED: Dedicated Mobile APK Showcase Section
+           No specific names, just "My Applications"
+           ========================================== -->
+        <section id="apk-center" class="apk-showcase-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>مركز النماذج والتطبيقات العملية (APK)</h2>
+                    <p>نماذج حقيقية لتطبيقات أندرويد قمت ببرمجتها وتطويرها بشكل كامل باستخدام Flutter، متاحة للتنزيل والتجربة الفورية</p>
+                    <div class="divider" style="margin-top: 15px;"></div>
+                </div>
+                <div class="apk-grid">
+                    <!-- APK 1 -->
+                    <div class="apk-card reveal">
+                        <div class="apk-header">
+                            <div class="apk-icon-box">
+                                <i class="fab fa-app-store-ios"></i>
+                            </div>
+                            <span class="apk-badge-top"><i class="fab fa-android"></i> جاهز للتجربة</span>
+                        </div>
+                        <div class="apk-details">
+                            <h3>التطبيق العملي الأول (App 1)</h3>
+                            <p>أحد تطبيقاتي المتميزة المطورة باستخدام إطار عمل Flutter. يعكس مهاراتي في بناء واجهات مستخدم سريعة، إدارة متقدمة لحالة التطبيق (State Management)، وتكامل ممتاز مع النظم الخلفية وسرعة المعالجة الفائقة.</p>
+                        </div>
+                        <div class="apk-footer">
+                            <a href="https://drive.google.com/file/d/1PdD_TiXOxLCH7ovXcBAEIU6bO-tKCpLJ/view?usp=drive_link" target="_blank" class="btn-apk-dl">
+                                <i class="fas fa-download"></i>
+                                <span>تحميل تطبيق الـ Android (APK)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- APK 2 -->
+                    <div class="apk-card reveal">
+                        <div class="apk-header">
+                            <div class="apk-icon-box">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span class="apk-badge-top"><i class="fab fa-android"></i> جاهز للتجربة</span>
+                        </div>
+                        <div class="apk-details">
+                            <h3>التطبيق العملي الثاني (App 2)</h3>
+                            <p>تطبيق هاتف ذكي عملي مطور بكود فلوتر نظيف ومرن. يتميز بواجهات ذات طابع فريد، ومراعاة دقيقة لتجربة المستخدم وسلاسة التصفح مع دعم كامل للتشغيل المستقر على مختلف أجهزة الأندرويد.</p>
+                        </div>
+                        <div class="apk-footer">
+                            <a href="https://drive.google.com/file/d/1EzfefYhe7a3599TIWCuOvbzXL4Cy6gtr/view?usp=drive_link" target="_blank" class="btn-apk-dl">
+                                <i class="fas fa-download"></i>
+                                <span>تحميل تطبيق الـ Android (APK)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- APK 3 -->
+                    <div class="apk-card reveal">
+                        <div class="apk-header">
+                            <div class="apk-icon-box">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <span class="apk-badge-top"><i class="fab fa-android"></i> جاهز للتجربة</span>
+                        </div>
+                        <div class="apk-details">
+                            <h3>التطبيق العملي الثالث (App 3)</h3>
+                            <p>نموذج تطبيقي متطور يجسد كفاءة استخدام الأنظمة الهجينة. يحتوي على أدوات وتفاعلات متكاملة تهدف إلى توفير استجابة فورية، وأداء ثابت وخفيف يسهل استخدامه لإدارة المهام والعمليات الفورية المتقدمة.</p>
+                        </div>
+                        <div class="apk-footer">
+                            <a href="https://drive.google.com/file/d/1-3-Z0jZtuSSiloKNM3tcDsMbyxr53P6C/view?usp=drive_link" target="_blank" class="btn-apk-dl">
+                                <i class="fas fa-download"></i>
+                                <span>تحميل تطبيق الـ Android (APK)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+           UPDATED: GIANT SHOWCASE PROJECTS SECTION
+           Unbelievably massive, high-end alternating rows
+           ========================================== -->
         <section id="projects" class="projects-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>أبرز المشاريع</h2>
-                    <div class="divider"></div>
+                    <h2>أبرز الأعمال والمشاريع البرمجية العملاقة</h2>
+                    <p>مجموعة من الحلول والأنظمة البرمجية متكاملة الأركان التي قمت بتصميمها وبرمجتها للشركات والقطاعات الكبرى</p>
+                    <div class="divider" style="margin-top: 15px;"></div>
                 </div>
-                <div class="projects-grid">
-                    <!-- Project 1 - GT Store -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                            <i class="fas fa-shopping-cart placeholder-icon"></i>
-                            <div class="overlay">
-                                <a href="https://abathr313.github.io/GT-Store/" target="_blank" class="view-btn">زيارة الموقع <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80" alt="GT Store" onerror="this.style.opacity='0'">
+
+                <div class="projects-showcase-container">
+                    
+                    <!-- Giant Project 1 - Taxi System -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-taxi project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1617201939412-3260321201aa?q=80&w=1200&auto=format&fit=crop" alt="Taxi System">
+                            <div class="project-visual-overlay"></div>
                         </div>
-                        <div class="project-info">
-                            <h3>متجر GT-Store المتكامل</h3>
-                            <p>متجر إلكتروني حديث مع لوحة تحكم متكاملة لإدارة المنتجات.</p>
-                            <div class="tags">
-                                <span>HTML</span><span>CSS</span><span>JS</span>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-star"></i> نظام مؤسساتي متكامل</span>
+                            <h3>نظام حجز وتتبع وتوجيه سيارات الأجرة الذكي</h3>
+                            <p>منصة برمجية عملاقة صممت خصيصاً لإدارة وتوجيه أسطول سيارات الأجرة. يتضمن النظام تطبيقين للهاتف الذكي (للراكب والسائق) متصلين بلوحة تحكم مركزية للإدارة، مع نظام تحديد المواقع الجغرافي المباشر وتتبع الخرائط وحساب الأجور آلياً بالزمن الحقيقي.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">Flutter / Node.js / GPS Live Maps</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">حالة المشروع</span>
+                                    <span class="meta-value">مكتمل ومستقر بنسبة 100%</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 - POS System -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-cash-register placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-123/" target="_blank" class="view-btn">زيارة المشروع <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=800&auto=format&fit=crop" alt="Cashier POS System" onerror="this.style.opacity='0'">
-                        </div>
-                        <div class="project-info">
-                            <h3>نظام كاشير متكامل (POS)</h3>
-                            <p>حل تقني احترافي لإدارة المبيعات والمخزون ونقاط البيع للمحلات والشركات.</p>
-                            <div class="tags">
-                                <span>Sales</span><span>Inventory</span><span>POS</span>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/-1231/" target="_blank" class="btn primary">زيارة لوحة المشروع <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 3 - Taxi System -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-taxi placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-1231/" target="_blank" class="view-btn">زيارة المشروع <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1617201939412-3260321201aa?q=80&w=800&auto=format&fit=crop" alt="Taxi System" onerror="this.style.opacity='0'">
+
+                    <!-- Giant Project 2 - POS Cashier -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-cash-register project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1200&auto=format&fit=crop" alt="POS System">
+                            <div class="project-visual-overlay"></div>
                         </div>
-                        <div class="project-info">
-                            <h3>نظام تكسي احترافي</h3>
-                            <p>تطبيق متكامل لإدارة خدمات التاكسي، التتبع المباشر، وحساب الأجور بدقة وفخامة.</p>
-                            <div class="tags">
-                                <span>Flutter</span><span>GPS</span><span>Maps</span>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-briefcase"></i> نظام مالي وإداري كود ريادي</span>
+                            <h3>نظام الكاشير المتكامل ونقاط البيع السحابية (POS)</h3>
+                            <p>نظام محاسبي عملاق مخصص لإدارة المبيعات، الفواتير الفورية، وحساب الأرباح للمتاجر والمستودعات الكبيرة. يوفر النظام أدوات متقدمة لتتبع المخزون بالباركود، وإصدار التقارير المالية والضريبية بدقة متناهية مع دعم مزامنة البيانات السحابية والعمل دون اتصال بالإنترنت.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">C# .NET / SQLite / cloud synchronization</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">مستوى النظام</span>
+                                    <span class="meta-value">نظام مالي معتمد للشركات والمخازن</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 4 - Game Making Store -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-gamepad placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-121/" target="_blank" class="view-btn">زيارة المشروع <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=800&auto=format&fit=crop" alt="Game Making Store" onerror="this.style.opacity='0'">
-                        </div>
-                        <div class="project-info">
-                            <h3>متجر صناعة الألعاب</h3>
-                            <p>متجر متكامل لبيع وشراء أصول الألعاب، الموديلات، والأدوات الإبداعية.</p>
-                            <div class="tags">
-                                <span>Game Dev</span><span>Assets</span><span>Store</span>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/-123/" target="_blank" class="btn primary">معاينة لوحة النظام <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 5 - HR System -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-users-cog placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-124/" target="_blank" class="view-btn">زيارة النظام <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800&q=80" alt="Employee Management System" onerror="this.style.opacity='0'">
+
+                    <!-- Giant Project 3 - Delivery System -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-motorcycle project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" alt="Delivery System">
+                            <div class="project-visual-overlay"></div>
                         </div>
-                        <div class="project-info">
-                            <h3>نظام إدارة الموظفين</h3>
-                            <p>منصة متكاملة لتنظيم بيانات الموظفين، الحضور، والأداء الوظيفي بكفاءة عالية.</p>
-                            <div class="tags">
-                                <span>HRMS</span><span>Management</span><span>Admin</span>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-truck"></i> منصة لوجستية شاملة</span>
+                            <h3>منصة إدارة خدمات التوصيل والطلبات اللوجستية</h3>
+                            <p>حل برمجي لوجستي متكامل مصمم ومطور لتنظيم حركة الطلبات من المطاعم والمتاجر إلى الزبائن، مجهز بنظام ذكي لتوزيع المهام على الكباتن تلقائياً بناءً على الموقع، وتتبع مباشر لموقع الكابتن الجغرافي مع لوحات إحصائية دقيقة لأصحاب المطاعم لإدارة مبيعاتهم.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">Flutter Mobile / Python Backend / PostgreSQL</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">السوق المستهدف</span>
+                                    <span class="meta-value">مهيأ ومخصص للسوق العراقي</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 6 - Delivery System -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-motorcycle placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-126/" target="_blank" class="view-btn">زيارة المشروع <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Delivery System" onerror="this.style.opacity='0'">
-                        </div>
-                        <div class="project-info">
-                            <h3>نظام توصيل ومطاعم متكامل</h3>
-                            <p>تطبيق ذكي لطلب الطعام وإدارة عمليات التوصيل مصمم للسوق العراقي.</p>
-                            <div class="tags">
-                                <span>Flutter</span><span>Delivery</span><span>Systems</span>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/-126/" target="_blank" class="btn primary">زيارة لوحة التحكم <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 7 - School System -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-school placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://abathr313.github.io/-144/fees.html" target="_blank" class="view-btn">زيارة النظام <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="School Management System" onerror="this.style.opacity='0'">
+
+                    <!-- Giant Project 4 - GT Store -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-shopping-bag project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80" alt="GT Store">
+                            <div class="project-visual-overlay"></div>
                         </div>
-                        <div class="project-info">
-                            <h3>نظام إدارة المدارس والطلاب</h3>
-                            <p>نظام متكامل لإدارة شؤون الطلاب، المناهج، والرسوم الدراسية مع تقارير مالية دقيقة.</p>
-                            <div class="tags">
-                                <span>Education</span><span>Management</span><span>Finance</span>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-globe"></i> منصة تجارة إلكترونية</span>
+                            <h3>منصة متجر GT-Store المتكامل للمبيعات الفورية</h3>
+                            <p>بوابة تجارة إلكترونية حديثة تتيح تجربة شراء فائقة السلاسة مع لوحة تحكم ذكية وشاملة تتيح للمشرفين تعديل الأسعار، إضافة المنتجات، وتتبع الطلبات وإحصاء الأرباح والمستخدمين لحظة بلحظة مع حماية تشفير عالية.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">HTML5 / Vanilla CSS / JavaScript Core</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">التجاوب والأداء</span>
+                                    <span class="meta-value">فائق السرعة ومتجاوب مع كافة الأجهزة</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 8 - Multimedia Drive 1 -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                             <i class="fas fa-film placeholder-icon"></i>
-                             <div class="overlay">
-                                <a href="https://drive.google.com/drive/folders/1TkjBn6Q8F9dV_aL-BZgpra62aT1itW9M" target="_blank" class="view-btn">رؤية العمل <i class="fas fa-eye"></i></a>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop" alt="أعمالي بالمونتاج" onerror="this.style.opacity='0'">
-                        </div>
-                        <div class="project-info">
-                            <h3>أعمالي بالمونتاج</h3>
-                            <p>أرشيف متكامل من المونتاج والتصاميم الجرافيكية والهويات البصرية.</p>
-                            <div class="tags">
-                                <span>Premiere</span><span>Photoshop</span>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/GT-Store/" target="_blank" class="btn primary">زيارة المتجر المباشر <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Featured AI Project -->
-                    <div class="project-card reveal featured-card">
-                        <div class="project-info featured">
-                             <span class="label">قيد التطوير</span>
-                            <h3>محرر فيديو مدعوم بالذكاء الاصطناعي</h3>
-                            <p>مشروع طموح للتحكم في الجداول الزمنية (Timelines) عبر الأوامر الصوتية بالمعالجة المحلية.</p>
-                             <div class="tags">
-                                <span>Python</span><span>AI</span><span>Automation</span>
+
+                    <!-- Giant Project 5 - School Financials -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-school project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop" alt="School Management System">
+                            <div class="project-visual-overlay"></div>
+                        </div>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-file-invoice-dollar"></i> إدارة مالية ومؤسساتية</span>
+                            <h3>نظام إدارة الحسابات والأقساط المدرسية المتطور</h3>
+                            <p>أداة محاسبية عملاقة تم تصميمها خصيصاً للمدارس والمراكز التعليمية، تتيح إدارة كامل بيانات الطلاب، الرسوم السنوية، الأقساط الشهرية، وتتبع المتأخرات المالية مع إرسال إشعارات وإنتاج كشوف مالية غاية في الدقة والتفصيل.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">JavaScript ES6 / CSS3 / Local Database Integration</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">القطاع المستهدف</span>
+                                    <span class="meta-value">المؤسسات التعليمية والمدارس الأهلية</span>
+                                </div>
+                            </div>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/-144/fees.html" target="_blank" class="btn primary">دخول النظام المحاسبي <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Giant Project 6 - Game Assets Store -->
+                    <div class="giant-project-panel reveal">
+                        <div class="project-visual-side">
+                            <i class="fas fa-gamepad project-visual-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1200&auto=format&fit=crop" alt="Game Asset Marketplace">
+                            <div class="project-visual-overlay"></div>
+                        </div>
+                        <div class="project-content-side">
+                            <span class="project-featured-label"><i class="fas fa-cubes"></i> منصة الأصول الرقمية</span>
+                            <h3>مستودع صُنّاع الألعاب والموديلات ثلاثية الأبعاد</h3>
+                            <p>بوابة إبداعية تمثل سوقاً رقمياً متكاملاً لبيع، شراء، واستعراض أصول وموديلات الألعاب ومؤثرات الرسومات، تهدف لتوفير بيئة خفيفة وسلسة لتسريع تطوير الألعاب لمصممي ومطوري الجرافيكس ثلاثي الأبعاد.</p>
+                            
+                            <div class="project-meta-details">
+                                <div class="meta-item">
+                                    <span class="meta-label">التقنيات المستخدمة</span>
+                                    <span class="meta-value">HTML5 / CSS / Advanced JS Catalog</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">الهدف الرقمي</span>
+                                    <span class="meta-value">خدمة مجتمع مطوري الألعاب ثلاثية الأبعاد</span>
+                                </div>
+                            </div>
+
+                            <div class="giant-project-actions">
+                                <a href="https://abathr313.github.io/-121/" target="_blank" class="btn primary">استكشاف المستودع <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Giant Banner: Multimedia & Video Editing Archives -->
+                <div class="multimedia-giant-banner reveal">
+                    <div class="multimedia-banner-text">
+                        <span class="project-featured-label" style="background: rgba(139,92,246,0.15); border-color: var(--secondary-color); color: #fff;"><i class="fas fa-photo-video"></i> الهوية البصرية والمونتاج</span>
+                        <h3>أرشيف أعمال المونتاج الإبداعي والهوية الجرافيكية</h3>
+                        <p>تصفح أرشيفي المتكامل والشامل الذي يحتوي على أعمال تحرير وتعديل الفيديو، الهويات الجرافيكية الاحترافية، تصميم الشعارات، وإخراج المواد الإبداعية للعديد من العلامات والشركات التجارية المرموقة.</p>
+                    </div>
+                    <div class="multimedia-banner-action">
+                        <a href="https://drive.google.com/drive/folders/1TkjBn6Q8F9dV_aL-BZgpra62aT1itW9M" target="_blank" class="btn secondary" style="border-color: var(--primary-color);">
+                            <span>تصفح الأرشيف الإبداعي الكامل</span>
+                            <i class="fas fa-film"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -317,18 +461,21 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
-                <div class="contact-wrapper glass-card reveal">
-                    <div class="contact-info">
-                        <h2>لنبدأ مشروعاً جديداً!</h2>
-                        <p>هل تبحث عن مطور يجمع بين قوة الكود وجمالية التصميم؟ أنا متاح للعمل الحر.</p>
+                <div class="contact-wrapper reveal">
+                    <!-- Info Card -->
+                    <div class="contact-info-card">
+                        <div>
+                            <h2>دعنا نبدأ التعاون الآن!</h2>
+                            <p>هل تبحث عن مطور برمجيات يمتلك القدرة على بناء منصات عملاقة وواجهات ممتازة بأحدث التقنيات وأفضل الأداء؟ تواصل معي فوراً لمناقشة أفكارك وتجسيدها في برمجيات حقيقية.</p>
+                        </div>
                         <div class="contact-links">
-                            <a href="https://wa.me/9647801943954" class="contact-item">
+                            <a href="https://wa.me/9647801943954" class="contact-item" target="_blank">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>07801943954</span>
+                                <span>07801943954 (واتساب)</span>
                             </a>
-                            <a href="https://www.instagram.com/o.jo_" class="contact-item">
+                            <a href="https://www.instagram.com/o.jo_" class="contact-item" target="_blank">
                                 <i class="fab fa-instagram"></i>
-                                <span>@o.jo_</span>
+                                <span>@o.jo_ (انستغرام)</span>
                             </a>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -336,17 +483,46 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contact-form-placeholder">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Connect">
+
+                    <!-- Premium Contact Form Card -->
+                    <div class="contact-form-card">
+                        <h3>إرسال رسالة مباشرة</h3>
+                        <form id="portfolio-contact-form" autocomplete="off">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="form-name">الاسم الكامل</label>
+                                    <input type="text" id="form-name" class="form-control" placeholder="ادخل اسمك هنا" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">البريد الإلكتروني</label>
+                                    <input type="email" id="form-email" class="form-control" placeholder="name@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="form-subject">الموضوع</label>
+                                <input type="text" id="form-subject" class="form-control" placeholder="عنوان رسالتك" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <label for="form-message">نص الرسالة</label>
+                                <textarea id="form-message" class="form-control" placeholder="اكتب تفاصيل استفسارك أو مشروعك هنا..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary btn-submit">
+                                <span>إرسال الرسالة الآن</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Success Toast Container -->
+    <div class="toast-container" id="toast-box"></div>
+
     <footer class="footer">
         <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2026 | تم التصميم والبرمجة بواسطة <span class="highlight">أباذر ماجد</span></p>
+            <p>جميع الحقوق محفوظة &copy; 2026 | تم التصميم والتطوير البرمجي بواسطة <span class="highlight">أباذر ماجد</span></p>
         </div>
     </footer>
 
