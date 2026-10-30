@@ -51,3 +51,29 @@ The contact form opens a draft in the visitor's email application. Sending happe
 - `assets/documents/`: downloadable CV.
 
 Existing Android download links and additional project links are retained. This repository contains the portfolio presentation; the linked projects have their own implementations.
+
+## Certificate → applied work
+
+| Certificate | Working example | Native source |
+| --- | --- | --- |
+| CS50 Python | Shipment Quality: CSV validation and reconciliation | Python, with tests and synthetic fixtures |
+| CS302 Software Engineering | Field inspection state and retry queue | JavaScript |
+| Foundational C# with Microsoft | Log Desk: service log triage | C# source and run instructions |
+| Responsive Web Design | Dr. Nazik Clinic responsive Arabic site | Existing live project |
+| Introduction to JavaScript I | Headway English interactive learning | Existing live project |
+| Cisco Networking Basics | Branch VLSM address planner | JavaScript |
+| Introduction to C++ | Stock Flow FEFO batch allocation | C++17 source and synthetic fixtures |
+| Google Display & Video 360 | Campaign budget pacing and KPI desk | JavaScript |
+
+New systems are portfolio demonstrations, not issuer-endorsed products. Browser versions run JavaScript; downloadable Python/C#/C++ sources are explicitly identified. Python and browser data engines are tested. C# and C++ sources were reviewed but not compiled on this machine because the required SDK/compiler was unavailable. No APK or EXE build is claimed.
+
+The existing local pharmacy project (Flutter/SQLite/Firebase), wholesale ERP foundation (TypeScript/PostgreSQL/Next.js), and basic LogFileViewer source informed the case studies. Their operational databases, credentials, private configuration, and original source files were not uploaded or modified. ERP is described as a foundation, consistent with its own README.
+
+### Market context
+
+The examples focus on operational data quality, support diagnostics, inventory workflows, infrastructure planning and campaign operations. These choices are informed by [Upwork's 2026 in-demand skills](https://www.upwork.com/press/releases/upworks-in-demand-skills-2026-demand-for-top-ai-skills-more-than-doubles-as-ai-is-embedded-into-everyday-work) (full-stack, automation, data analytics and display advertising) and [WEF's 2025 skills outlook](https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/) (networks and technology skills). This supports the choice of skill areas, not a claim that any specific demo guarantees employment.
+
+```sh
+node --test lab/engine.test.cjs systems/engine.test.cjs
+python -m unittest discover -s systems/source/python -p "test_*.py"
+```
