@@ -15,6 +15,15 @@ I build mobile applications, web products, business systems and automation. My t
 
 ![Logba — actual project screenshot](assets/projects/logba.webp)
 
+## Engineering lab
+
+[Try the interactive models](https://abathr313.github.io/abathr/lab/). These are new portfolio demonstrations with synthetic data, not client deployments.
+
+- **Shipment reconciliation:** validates two CSV manifests, matches by shipment ID, flags duplicate/missing/unexpected records and weight discrepancies, and exports a report. Duplicate weights are excluded from delta calculations.
+- **Field inspection queue:** checklist validation, device-local persistence, simulated network failures, and retry transitions preserving each report ID. Synchronization is explicitly simulated; no server receives these reports.
+
+Pure data operations live in `lab/engine.js`. Run their edge-case tests with `node --test lab/engine.test.cjs`.
+
 ## Certificates
 
 Eight original certificate images are available in the [portfolio gallery](https://abathr313.github.io/abathr/#certificates), with issuer verification links extracted from the supplied CV. These are course-completion and professional-learning certificates, not university degrees. Images were extracted from the original certificate PDFs; no certificate content was generated or altered.
@@ -36,6 +45,7 @@ The contact form opens a draft in the visitor's email application. Sending happe
 - `index.html`: Arabic content, selected projects, certificate cards and accessible navigation.
 - `style.css`, `script.js`: original layout and navigation, with corrected contact behaviour.
 - `portfolio.css`, `portfolio.js`: focused visual improvements and keyboard-accessible certificate viewer.
+- `lab/`: interactive engineering models, data engine and tests.
 - `assets/certificates/`: original certificate previews.
 - `assets/projects/`: actual screenshots of the featured projects.
 - `assets/documents/`: downloadable CV.

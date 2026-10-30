@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="نماذج تفاعلية في مطابقة بيانات الشحنات وتدفق الفحص الميداني — أباذر ماجد">
+  <title>مختبر الحلول | أباذر ماجد</title>
+  <link rel="stylesheet" href="lab.css">
+  <script src="engine.js" defer></script>
+  <script src="lab.js" defer></script>
+</head>
+<body>
+  <header class="shell topbar"><a href="../">ABATHR<span> / LAB</span></a><a href="../#engineering-lab">العودة إلى معرض الأعمال ↗</a></header>
+  <main class="shell">
+    <div class="intro"><p class="eyebrow">ENGINEERING IN THE OPEN / 02 EXPERIMENTS</p><h1>المشكلة أولاً.<br><span>ثم الحل الذي تقدر تجربه.</span></h1><p>نماذج هندسية تفاعلية ببيانات افتراضية؛ توضّح معالجة البيانات والتحقق منها، وإدارة حالة العمل عند انقطاع الاتصال. ليست أنظمة عملاء أو خدمات إنتاجية.</p></div>
+    <nav class="lab-nav" aria-label="اختر النموذج"><a href="#reconciliation">01 / مطابقة الشحنات</a><a href="#field-kit">02 / الفحص الميداني</a></nav>
+
+    <section id="reconciliation" class="experiment">
+      <div class="experiment-heading"><div><p class="eyebrow">DATA QUALITY / LOGISTICS</p><h2>وين اختفى فرق الوزن؟</h2></div><span class="tag">نموذج يعمل داخل المتصفح</span></div>
+      <p class="description">طابق كشف المستودع مع كشف الاستلام باستخدام رقم الشحنة. المحرك يكشف السجلات المكررة، الشحنات الناقصة، وفروق الأوزان خارج السماحية؛ بدون جمع فروقات السجلات المكررة بالخطأ.</p>
+      <div class="scenario"><b>السيناريو التجريبي</b><span>ست شحنات متوقعة، اختلافات في الوزن، سجل مكرر، وشحنة غير معروفة. عدّل القيم أو حمّل المثال ثم افحص النتيجة.</span></div>
+      <form id="reconcile-form">
+        <div class="data-grid">
+          <label>كشف المستودع <small dir="ltr">shipment_id,weight_kg</small><textarea id="expected-data" dir="ltr" rows="8" spellcheck="false" required aria-describedby="csv-help"></textarea></label>
+          <label>كشف الاستلام <small dir="ltr">shipment_id,weight_kg</small><textarea id="received-data" dir="ltr" rows="8" spellcheck="false" required aria-describedby="csv-help"></textarea></label>
+        </div>
+        <p id="csv-help" class="hint">CSV بعمودين فقط: رقم الشحنة والوزن بالكيلوغرام. الأوزان موجبة أو صفر، والحد 500 سجل لكل كشف. البيانات تبقى في متصفحك ولا تُرسل إلى خادم.</p>
+        <div class="actions"><label class="tolerance">السماحية (كغ)<input id="tolerance" type="number" min="0" step="0.1" value="2" required></label><button type="submit">حلّل المطابقة ←</button><button class="secondary" id="load-sample" type="button">إعادة المثال</button><button class="secondary" id="export-report" type="button" disabled>تصدير التقرير CSV</button></div>
+      </form>
+      <p id="reconcile-status" role="status" class="status"></p>
+      <div id="reconcile-results" hidden>
+        <div class="metrics" id="reconcile-metrics"></div>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="تقرير مطابقة الشحنات"><table><thead><tr><th>الشحنة</th><th>المتوقع كغ</th><th>المستلم كغ</th><th>الفرق كغ</th><th>القرار</th></tr></thead><tbody id="report-rows"></tbody></table></div>
+        <p class="hint">الفرق = المستلم − المتوقع. السجل المكرر يُحال للمراجعة ولا يُحتسب وزنه أو فرقُه. الأرقام للعرض التجريبي فقط.</p>
+      </div>
+      <details><summary>القرار الهندسي</summary><p>فصل التحليل عن الواجهة يسهّل اختبار الحالات الحدّية. تُفحص بنية CSV والأرقام قبل المطابقة، وتُفهرس الشحنات برقمها بدلاً من الاعتماد على ترتيب الصفوف. التصدير يعالج القيم التي قد تفسرها برامج الجداول كمعادلات.</p></details>
+    </section>
+
+    <section id="field-kit" class="experiment">
+      <div class="experiment-heading"><div><p class="eyebrow">STATE MACHINES / OFFLINE WORKFLOW</p><h2>الفحص يستمر. حتى لو الشبكة توقفت.</h2></div><span class="tag">حفظ محلي · مزامنة محاكاة</span></div>
+      <p class="description">نموذج لمهام فحص معدّات: أكمل قائمة التحقق، احفظ تقريرك محلياً، ثم جرّب طابور المزامنة وفشل الإرسال وإعادة المحاولة بدون تكرار التقرير.</p>
+      <div class="field-layout"><form id="inspection-form" class="inspection-form">
+        <h3>تقرير فحص معدّة</h3><label>المعدّة<select id="equipment"><option value="PUMP-07">PUMP-07 / مضخة التبريد</option><option value="GEN-02">GEN-02 / مولّد احتياطي</option><option value="HVAC-11">HVAC-11 / وحدة التهوية</option></select></label>
+        <fieldset><legend>قائمة التحقق — أكمل النقاط الثلاث</legend><label><input type="checkbox" name="inspection-check" required> فحص التوصيلات والتسربات</label><label><input type="checkbox" name="inspection-check" required> قراءة التشغيل ضمن الحدود</label><label><input type="checkbox" name="inspection-check" required> توثيق الحالة وملاحظات الصيانة</label></fieldset>
+        <label>نتيجة الفحص<select id="outcome"><option value="pass">جاهزة للتشغيل</option><option value="maintenance">تحتاج صيانة</option></select></label><label>ملاحظات الفني<textarea id="inspection-note" rows="3" maxlength="400" placeholder="مثال: اهتزاز غير معتاد، مراجعة تثبيت القاعدة" required></textarea></label><button type="submit">حفظ التقرير في الطابور</button>
+      </form><div class="queue-panel"><div class="queue-heading"><h3>طابور التقارير</h3><span id="queue-count" class="tag">0 تقارير</span></div><p class="hint">يُحفظ على هذا الجهاز فقط. «تمت المزامنة» هنا تعني نجاح المحاكاة، ولا يوجد خادم يستقبل التقارير.</p><div class="simulation"><label><input type="checkbox" id="simulated-online" checked> الاتصال التجريبي متاح</label><label><input type="checkbox" id="fail-next"> أفشل محاولة الإرسال القادمة</label></div><div class="actions"><button id="sync-queue" type="button">مزامنة تجريبية</button><button id="reset-queue" type="button" class="secondary">مسح بيانات النموذج</button></div><p id="queue-status" role="status" class="status"></p><ol id="queue-list" class="queue-list"></ol></div></div>
+      <details><summary>القرار الهندسي</summary><p>كل تقرير له معرّف ثابت وحالات واضحة: بانتظار الإرسال، تمت المزامنة، أو يحتاج إعادة محاولة. إعادة المحاولة تستخدم نفس المعرّف. هذا نموذج لحالة الواجهة وطابور محلي باستخدام localStorage؛ بناء نظام فعلي يتطلب خادماً يتحقق من الصلاحيات ويمنع تكرار الطلبات بمعرّفها.</p></details>
+    </section>
+    <noscript><p class="status">فعّل JavaScript لتجربة النماذج التفاعلية.</p></noscript>
+  </main>
+  <footer class="shell">صُممت هذه النماذج لمعرض أباذر ماجد · <a href="https://github.com/abathr313/abathr/tree/main/lab">استعرض الشيفرة على GitHub ↗</a></footer>
+</body>
+</html>
