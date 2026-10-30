@@ -18,6 +18,7 @@ const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 // Open Drawer
 const openDrawer = () => {
     mobileDrawer.classList.add('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'true');
     drawerOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // Lock background scroll
 };
@@ -25,6 +26,7 @@ const openDrawer = () => {
 // Close Drawer
 const closeDrawer = () => {
     mobileDrawer.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'false');
     drawerOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Unlock background scroll
 };
@@ -62,43 +64,13 @@ const navLinkElements = document.querySelectorAll('.nav-links a');
 const mobileNavLinkElements = document.querySelectorAll('.mobile-nav-links a');
 
 const scrollSpy = () => {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 140; // Offset for sticky navbar
-        const sectionId = current.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            // Update desktop navigation links
-            navLinkElements.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === `#${sectionId}`) {
-                    a.classList.add('active');
-                }
-            });
-            // Update mobile navigation links
-            mobileNavLinkElements.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === `#${sectionId}`) {
-                    a.classList.add('active');
-                }
-            });
-        }
+    const current = [...sections].reverse().find(section => section.offsetTop <= window.scrollY + 150);
+    [...navLinkElements, ...mobileNavLinkElements].forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current?.id}`);
     });
 };
 
 window.addEventListener('scroll', scrollSpy);
-
-// Premium Glitch Text Effect for Hero Title
-const glitchText = document.querySelector('.glitch-text');
-if (glitchText) {
-    setInterval(() => {
-        glitchText.style.textShadow = Math.random() > 0.9 
-            ? '2px 0 rgba(212, 175, 55, 0.4), -2px 0 rgba(255, 255, 255, 0.2)' 
-            : 'none';
-    }, 150);
-}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -114,51 +86,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Premium Contact Form Submission & Success Toast Notification
+// GitHub Pages has no mail backend: open a real draft instead of claiming delivery.
 const contactForm = document.getElementById('portfolio-contact-form');
-const toastBox = document.getElementById('toast-box');
-
 if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get Input Values (Simulating sending)
-        const name = document.getElementById('form-name').value;
-        const email = document.getElementById('form-email').value;
-        const subject = document.getElementById('form-subject').value;
-        const message = document.getElementById('form-message').value;
-
-        // Custom Toast Notification HTML
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerHTML = `
-            <div class="toast-icon">
-                <i class="fas fa-check"></i>
-            </div>
-            <div class="toast-content">
-                <h4>شكراً لك يا ${name}!</h4>
-                <p>لقد تم إرسال رسالتك بنجاح. سأتواصل معك قريباً جداً.</p>
-            </div>
-        `;
-
-        // Append to container
-        toastBox.appendChild(toast);
-
-        // Show with delay for CSS transition
-        setTimeout(() => {
-            toast.classList.add('show');
-        }, 50);
-
-        // Reset form
-        contactForm.reset();
-
-        // Auto remove toast after 5.5 seconds
-        setTimeout(() => {
-            toast.classList.remove('show');
-            // Remove from DOM after transition completes
-            setTimeout(() => {
-                toast.remove();
-            }, 500);
-        }, 5500);
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('form-name').value.trim();
+        const email = document.getElementById('form-email').value.trim();
+        const subject = document.getElementById('form-subject').value.trim();
+        const message = document.getElementById('form-message').value.trim();
+        const body = `${message}\n\nالاسم: ${name}\nبريد التواصل: ${email}`;
+        window.location.href = `mailto:aabadhr880@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        document.getElementById('contact-status').textContent = 'أكمل إرسال الرسالة من تطبيق البريد. إذا لم يفتح، راسلني مباشرة على aabadhr880@gmail.com';
     });
 }
